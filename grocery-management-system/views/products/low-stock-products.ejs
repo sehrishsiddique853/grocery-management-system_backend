@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Stock Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">Low Stock Products</h1>
+            <a href="/" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors">
+                ← Back to Home
+            </a>
+        </div>
+
+        <% if (products.length > 0) { %>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
+                <p class="text-orange-700 font-semibold">📉 Found <%= products.length %> product(s) with low stock (less than 50)</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <% products.forEach(product => { %>
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-orange-500">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2"><%= product.ProductName %></h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p><strong>Firm:</strong> <%= product.FirmName %></p>
+                            <p><strong>Price:</strong> $<%= product.Price %></p>
+                            <p class="text-orange-600 font-semibold">
+                                <strong>Quantity:</strong> <%= product.Quantity %>
+                            </p>
+                            <p><strong>Expiry:</strong> <%= product.ExpiryDate.toLocaleDateString() %></p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="/products/<%= product._id %>" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                <p class="text-green-600 text-lg font-semibold">✅ All products have sufficient stock!</p>
+                <p class="text-gray-600 mt-2">No products with quantity less than 50.</p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

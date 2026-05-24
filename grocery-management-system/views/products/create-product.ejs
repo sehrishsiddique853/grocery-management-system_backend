@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold text-gray-800">Add New Product</h1>
+                <a href="/products" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors">
+                    ← Back to Products
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <form action="/products/create" method="POST" class="space-y-4">
+                    <div>
+                        <label for="ProductName" class="block text-sm font-medium text-gray-700 mb-1">Product Name</label>
+                        <input type="text" id="ProductName" name="ProductName" required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="FirmName" class="block text-sm font-medium text-gray-700 mb-1">Firm Name</label>
+                        <input type="text" id="FirmName" name="FirmName" required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="Price" class="block text-sm font-medium text-gray-700 mb-1">Price</label>
+                        <input type="number" id="Price" name="Price" step="0.01" required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="Quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+                        <input type="number" id="Quantity" name="Quantity" required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="ExpiryDate" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
+                        <input type="date" id="ExpiryDate" name="ExpiryDate" required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div class="flex space-x-3 pt-4">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md transition-colors">
+                            Add Product
+                        </button>
+                        <a href="/products" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-md transition-colors">
+                            Cancel
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

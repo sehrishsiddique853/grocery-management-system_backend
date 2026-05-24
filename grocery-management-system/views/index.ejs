@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">🏪 Grocery Management System</h1>
+            <p class="text-lg text-gray-600">Manage your grocery products efficiently</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <!-- Insert Data Card -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">📥 Insert Sample Data</h3>
+                <p class="text-gray-600 mb-4">Load sample products from JSON file</p>
+                <a href="/insert" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors block text-center">
+                    Insert Products
+                </a>
+            </div>
+
+            <!-- View All Products -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">📦 All Products</h3>
+                <p class="text-gray-600 mb-4">View all products in the database</p>
+                <a href="/products" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors block text-center">
+                    View Products
+                </a>
+            </div>
+
+            <!-- Search Products -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">🔍 Search Products</h3>
+                <p class="text-gray-600 mb-4">Search by price range and name</p>
+                <a href="/product/inrange" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors block text-center">
+                    Search Products
+                </a>
+            </div>
+
+        
+            <!-- Expired Products -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">⚠️ Expired Products</h3>
+                <p class="text-gray-600 mb-4">View all expired products</p>
+                <a href="/product/expired" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors block text-center">
+                    View Expired
+                </a>
+            </div>
+
+            <!-- Update Prices -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">💰 Update Prices</h3>
+                <p class="text-gray-600 mb-4">Update product prices by name and firm</p>
+                <a href="/product/update-price" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors block text-center">
+    Update Prices
+</a>
+
+            </div>
+
+            <!-- Low Stock -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">📉 Low Stock</h3>
+                <p class="text-gray-600 mb-4">Products with quantity less than 50</p>
+                <a href="/product/less-than-50" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md transition-colors block text-center">
+                    View Low Stock
+                </a>
+            </div>
+
+            <!-- Add New Product -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">➕ Add Product</h3>
+                <p class="text-gray-600 mb-4">Add a new product to the database</p>
+                <a href="/products/create/new" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md transition-colors block text-center">
+                    Add Product
+                </a>
+            </div>
+
+           
+
+        
+        </div>
+    </div>
+</body>
+</html>

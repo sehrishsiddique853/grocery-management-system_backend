@@ -1,0 +1,28 @@
+{
+  "name": "sehrish_waflab_task7_f25",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1",
+    "nodemon": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sehrishsiddique853/Projects.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sehrishsiddique853/Projects/issues"
+  },
+  "homepage": "https://github.com/sehrishsiddique853/Projects#readme"
+}
